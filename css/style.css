@@ -1,20 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Playfair+Display:wght@900&display=swap');
 :root {
-  --primary: #0699A6;
-  --secondary:  rgba(158, 140, 108, 0.2);
+  --color-primary: #0699A6;
+  --color-secondary:  rgba(158, 140, 108, 0.2);
   --black:black;
   --white: #fff;
   --gold: #9E8C6C;
-  --font-narrow: 'PT Sans Narrow';
-  --font-playfair-display: 'Playfair Display';
-  --font-serif: 'serif';
-  --font-sans-serif: 'sans-serif'
+  --font-primary: 'PT Sans Narrow';
+  --font-secondary: 'Playfair Display';
+  --font-tetiary: 'serif';
+  --font-fourth: 'sans-serif'
 }
+/* font narrow is the primary */
+/* font playfair Display is the secondary */
+/* font serif is tetiary */
 
+/* font-narrow */
+.role,.contact,.about-me-section p,.experience-role,
+.experience-date,.school,.grad-date,
+.skill-set-section h3,.skill-set-list-item,
+.awards-section h3,.awards-list-item, .career-traits h3,
+.career-traits p, .recent-works h3,.recent-works-item{
+  font-family: var(--font-primary), var(--font-tetiary);
+  font-style: normal;
+}
+/* font playfairdisplay */
+.name,.about-me-section h2,.experience-section h2,
+.education h1,.footer-inner h3,.email,.phone-no{
+  font-family: var(--font-secondary),var(--font-fourth);
+  font-style: normal;
+}
 header{
   height: 660px;
-  background: var(--secondary);
+  background: var(--color-secondary);
   color: var(--white);
   position: relative; 
   /* padding: 0px; */
@@ -62,8 +80,7 @@ header::after {
   top: 40px;
 }
  .role{
-  font-family: var(--font-narrow);
-  font-style: normal;
+  
   font-weight: bold;
   margin-top: 35px;
   font-size: 14px;
@@ -78,7 +95,6 @@ header::after {
 }
 .name{
   margin-top: 22px!important;
-  font-family: var(--font-playfair-display),var(--font-serif);
   margin: 0px;
   color: var(--black);
   font-size: 3.5rem;
@@ -88,13 +104,10 @@ header::after {
   margin-bottom: 45px;
 }
 .contact{
-  font-family: var(--font-playfair-display), var(--font-serif);
-  font-family: var(--font-narrow), var(--font-sans-serif);
-  font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  background: var(--primary);
+  background: var(--color-primary);
   padding: 22px 64px;
   font-size: 1.2rem;
 }
@@ -108,23 +121,19 @@ header::after {
   padding-bottom: 0px;
 }
 .about-me-section h2{
-  font-family: var(--font-playfair-display),var(--font-serif);
-  font-style: normal;
   font-weight: 900;
   font-size: 32px;
   line-height: 42px;
   margin-bottom: 15px;
 }
 .about-me-section p{
-  font-family: var(--font-narrow), var(--font-sans-serif);
-  font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 45px;
 }
 .deco{
-  background: var(--primary);
+  background: var(--color-primary);
   padding: 10px 20px;
   width: 25%;
   margin-bottom: 15px;
@@ -136,15 +145,11 @@ header::after {
   margin-top: 30px;
 }
 .experience-section h2{
-  font-family: var(--font-playfair-display),var(--font-serif);
-  font-style: normal;
   font-weight: 900;
   font-size: 32px;
   line-height: 42px;
 }
 .experience-role{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -154,8 +159,6 @@ header::after {
   margin-bottom: 15px;
 }
 .experience-date{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -167,8 +170,6 @@ header::after {
   margin-bottom: 40px;
 }
 .education h1{
-  font-family: var(--font-playfair-display),var(--font-serif);
-  font-style: normal;
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
@@ -176,8 +177,6 @@ header::after {
   margin-bottom: 20px;
 }
 .school{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -187,9 +186,6 @@ header::after {
   margin-bottom: 10px;
 }
 .grad-date{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: var(--black);
@@ -200,8 +196,6 @@ header::after {
   padding-top: 8px;
 }
 .skill-set-section h3{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 24px;
@@ -216,8 +210,6 @@ header::after {
 }
 .skill-set-list-item{
   padding: 3px 0px;
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
@@ -225,8 +217,6 @@ header::after {
   
 }
 .awards-section h3{
-  font-family: var(--font-narrow), var(--font-serif);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -240,8 +230,6 @@ header::after {
 }
 .awards-list-item{
   padding: 3px 0px;
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
@@ -251,8 +239,6 @@ header::after {
   margin-bottom: 35px;
 }
 .career-traits h3{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -262,8 +248,6 @@ header::after {
   margin-bottom: 12px;
 }
 .career-traits p{
-  font-family: var(--font-narrow),var(--font-serif);
-  font-style: normal;
   font-weight: 100!important;
   font-size: 18px;
   line-height: 30px;
@@ -275,8 +259,6 @@ header::after {
 }
 
 .recent-works h3{
-  font-family: var(--font-narrow);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -291,12 +273,10 @@ header::after {
   margin-bottom: 30px;
 }
 .recent-works-item{
-  font-family: var(--font-narrow);
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
-  color: var(--primary);
+  color: var(--color-primary);
 }
 footer{
   height: 550px;
@@ -330,8 +310,6 @@ footer::after {
   margin-top: 80px;
 }
 .footer-inner h3{
-  font-family: var(--font-playfair-display);
-  font-style: normal;
   font-weight: 900;
   font-size: 45px;
   line-height: 50px;
@@ -345,13 +323,11 @@ footer::after {
 }
 .email,
 .phone-no{
-  font-family: var(--font-playfair-display);
-  font-style: normal;
   font-weight: 900;
   font-size: 26px;
   line-height: 36px;
   text-align: center;
-  color: var(--primary);
+  color: var(--color-primary);
 }
 .social-media{
   display: flex;
@@ -366,7 +342,7 @@ footer::after {
   height: 30px;
 }
 #icon{
-  fill: var(--primary);
+  fill: var(--color-primary);
 }
 
 /* MEDIA QUERIES */
@@ -475,7 +451,7 @@ footer::after {
 @media (min-width: 769px) {
   header{
     height: 550px;
-    background: var(--secondary);
+    background: var(--color-secondary);
     color: var(--white);
     position: relative; 
     padding: 100px 110px;
@@ -559,7 +535,7 @@ footer::after {
   .big{
     display: block;
     margin-right: 15px;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 30px;
     font-weight: 900;
   }
@@ -574,7 +550,7 @@ footer::after {
 @media (min-width: 1025px) {
   header{
     height: 580px;
-    background: var(--secondary);
+    background: var(--color-secondary);
     color: #fff;
     position: relative; 
     padding: 100px 130px;
@@ -647,7 +623,7 @@ footer::after {
   }
 
   .deco{
-    background: var(--primary);
+    background: var(--color-primary);
     padding: 5px 20px;
     width: 10%;
     margin-bottom: 15px;
@@ -710,7 +686,7 @@ footer::after {
   .big{
     display: block;
     margin-right: 15px;
-    color: var(--primary);
+    color: var(--color-primary);
     font-size: 30px;
     font-weight: 900;
   }
