@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Playfair+Display:wght@900&display=swap');
-.content{}
+:root {
+  --primary: #0699A6;
+  --secondary:  rgba(158, 140, 108, 0.2);
+  --black:black;
+  --white: #fff;
+  --gold: #9E8C6C;
+  --font-narrow: 'PT Sans Narrow';
+  --font-playfair-display: 'Playfair Display';
+  --font-serif: 'serif';
+  --font-sans-serif: 'sans-serif'
+}
+
 header{
   height: 660px;
-  background: rgba(158, 140, 108, 0.2);
-  color: #fff;
+  background: var(--secondary);
+  color: var(--white);
   position: relative; 
   /* padding: 0px; */
   display: flex;
@@ -21,30 +32,22 @@ header::after {
   bottom: -55px;
   right: 0;
   left: 0;
-  background: #fff;
+  background: var(--white);
   transform: skewY(-3deg);
   -webkit-transform: skewY(-6deg);
   -moz-transform: skewY(-3deg);
   -ms-transform: skewY(-3deg);
 }
 
-.head .head-upper{
+.head-upper{
   margin-top: 0px;
   padding: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.head .head-upper > div >div{
-  z-index: 3;
-  position: absolute;
-  left: 170px;
-  /* border: 1px solid black;
-  border-radius: 50%; */
-  padding: 50px;
-}
 
-.head .head-upper >div .avatar{
+.avatar{
   border-radius: 50%;
   width: 170px;
   height: 170px;
@@ -59,39 +62,39 @@ header::after {
   top: 40px;
 }
  .role{
-  font-family: 'PT Sans Narrow';
+  font-family: var(--font-narrow);
   font-style: normal;
   font-weight: bold;
   margin-top: 35px;
   font-size: 14px;
   letter-spacing: 3px;
-  color: #9E8C6C;
+  color: var(--gold);
   text-transform: uppercase;
 }
-.head .head-lower{
+.head-lower{
  display: flex;
  align-items: center;
  flex-direction: column;
 }
-.head .head-lower h1{
+.name{
   margin-top: 22px!important;
-  font-family: 'Playfair Display','serif';
+  font-family: var(--font-playfair-display),var(--font-serif);
   margin: 0px;
-  color: black;
+  color: var(--black);
   font-size: 3.5rem;
   line-height: 50px;
   font-weight: 900!important;
   text-align: center;
   margin-bottom: 45px;
 }
-.head .head-lower .contact{
-  font-family: 'Playfair Display', serif;
-  font-family: 'PT Sans Narrow', sans-serif;
+.contact{
+  font-family: var(--font-playfair-display), var(--font-serif);
+  font-family: var(--font-narrow), var(--font-sans-serif);
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  background: #0699A6;
+  background: var(--primary);
   padding: 22px 64px;
   font-size: 1.2rem;
 }
@@ -105,7 +108,7 @@ header::after {
   padding-bottom: 0px;
 }
 .about-me-section h2{
-  font-family: 'Playfair Display','serif';
+  font-family: var(--font-playfair-display),var(--font-serif);
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
@@ -113,7 +116,7 @@ header::after {
   margin-bottom: 15px;
 }
 .about-me-section p{
-  font-family: 'PT Sans Narrow', 'sans-serif';
+  font-family: var(--font-narrow), var(--font-sans-serif);
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
@@ -121,7 +124,7 @@ header::after {
   margin-bottom: 45px;
 }
 .deco{
-  background: #0699A6;;
+  background: var(--primary);
   padding: 10px 20px;
   width: 25%;
   margin-bottom: 15px;
@@ -133,63 +136,63 @@ header::after {
   margin-top: 30px;
 }
 .experience-section h2{
-  font-family: 'Playfair Display','serif';
+  font-family: var(--font-playfair-display),var(--font-serif);
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
   line-height: 42px;
 }
 .experience-role{
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color: var(--gold);
   margin-bottom: 15px;
 }
 .experience-date{
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 10px;
 }
 .education{
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.education > h1{
-  font-family: 'Playfair Display','serif';
+.education h1{
+  font-family: var(--font-playfair-display),var(--font-serif);
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 20px;
 }
 .school{
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color: var(--gold);
   margin-bottom: 10px;
 }
 .grad-date{
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 6px;
 }
 .skill-set{
@@ -197,108 +200,108 @@ header::after {
   padding-top: 8px;
 }
 .skill-set-section h3{
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color: var(--gold);
   margin-bottom: 8px;
 }
-.skill-set-section > ul{
+.skill-set-list{
   padding: 15px 0px;
   margin-bottom: 15px;
 }
-.skill-set-section > ul> li{
+.skill-set-list-item{
   padding: 3px 0px;
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
   
 }
-.awards-section >h3{
-  font-family: 'PT Sans Narrow', 'serif';
+.awards-section h3{
+  font-family: var(--font-narrow), var(--font-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color: var(--gold);
 }
-.awards-section >ul {
+.awards-list {
   padding: 12px 0px;
   margin-bottom: 12px;
 }
-.awards-section > ul >li{
+.awards-list-item{
   padding: 3px 0px;
-  font-family: 'PT Sans Narrow','serif';
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
 }
 .career-traits{
   margin-bottom: 35px;
 }
-.career-traits >h3{
-  font-family: 'PT Sans Narrow','serif';
+.career-traits h3{
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color:var(--gold);
   margin-bottom: 12px;
 }
-.career-traits > p{
-  font-family: 'PT Sans Narrow','serif';
+.career-traits p{
+  font-family: var(--font-narrow),var(--font-serif);
   font-style: normal;
   font-weight: 100!important;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 12px;
 }
-.career-traits > p> span{
+.bolden{
   font-weight: 900!important;
 }
 
-.recent-works >h3{
-  font-family: 'PT Sans Narrow';
+.recent-works h3{
+  font-family: var(--font-narrow);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #9E8C6C;
+  color: var(--gold);
   margin-bottom: 12px;
 }
-.recent-works >div{
+.recent-works div{
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
-.recent-works > div >a{
-  font-family: 'PT Sans Narrow';
+.recent-works-item{
+  font-family: var(--font-narrow);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
-  color: #0699A6;
+  color: var(--primary);
 }
 footer{
   height: 550px;
   background: rgba(158, 140, 108, 0.2);
-  color: #fff;
+  color: var(--white);
   position: relative; 
   padding: 40px;
   padding-top: 100px;
@@ -314,7 +317,7 @@ footer::after {
   top: -25px;
   right: 0;
   left: 0;
-  background: #fff;
+  background: var(--white);
   transform: skewY(-2deg);
   -webkit-transform: skewY(-5deg);
   -moz-transform: skewY(-3deg);
@@ -323,32 +326,32 @@ footer::after {
 .big{
   display: none;
 }
-footer > div{
+.footer-inner{
   margin-top: 80px;
 }
-footer > div > h3{
-  font-family: 'Playfair Display';
+.footer-inner h3{
+  font-family: var(--font-playfair-display);
   font-style: normal;
   font-weight: 900;
   font-size: 45px;
   line-height: 50px;
   text-align: center;
   letter-spacing: -1.13793px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 40px;
 }
 .contact-addr{
   margin-top: 10px;
 }
-.contact-addr > a,
-.contact-addr > h4{
-  font-family: 'Playfair Display';
+.email,
+.phone-no{
+  font-family: var(--font-playfair-display);
   font-style: normal;
   font-weight: 900;
   font-size: 26px;
   line-height: 36px;
   text-align: center;
-  color: #0699A6;
+  color: var(--primary);
 }
 .social-media{
   display: flex;
@@ -357,10 +360,13 @@ footer > div > h3{
   margin-top: 30px;
   margin-left: -30px;
 }
-.social-media > i{
-  color: #0699A6;
-  font-size: 2rem;
+.icon{
   margin-left: 45px;
+  width: 30px;
+  height: 30px;
+}
+#icon{
+  fill: var(--primary);
 }
 
 /* MEDIA QUERIES */
@@ -370,12 +376,13 @@ footer > div > h3{
     top: 50px;
   }
 }
+
 /* TABLETS */
 @media (min-width: 481px) {
   header{
     height: 800px;
   }
-  .head .head-upper >div .avatar{
+  .avatar{
     border-radius: 50%;
     width: 230px;
     height: 220px;
@@ -385,12 +392,12 @@ footer > div > h3{
     margin-left: 10px;
     font-size: 1.2rem;
   }
-  .head .head-lower h1{
+  .name{
     margin-top: 12px!important;
     font-size: 90px!important;
     line-height: 80px;
   }
-  .head .head-lower .contact{
+  .contact{
     padding: 20px 70px;
     font-size: 1.4rem;
   }
@@ -424,8 +431,8 @@ footer > div > h3{
     margin-top: 50px;
     margin-bottom: 55px;
   }
-  .skill-set-section > ul,
-  .awards-section > ul
+  .skill-set-list,
+  .awards-list
   {
     margin-bottom: 40px;
   }
@@ -445,17 +452,17 @@ footer > div > h3{
     transform: skewY(-3deg);
     -webkit-transform: skewY(-4deg);
   }
-  footer >div {
+  .footer-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  footer > div > h3{
+  .footer-inner h3{
     font-size: 65px;
   }
-  .contact-addr > a,
-.contact-addr > h4{
+  .email,
+.phone-no{
   font-size: 40px;
 }
 .social-media{
@@ -468,8 +475,8 @@ footer > div > h3{
 @media (min-width: 769px) {
   header{
     height: 550px;
-    background: rgba(158, 140, 108, 0.2);
-    color: #fff;
+    background: var(--secondary);
+    color: var(--white);
     position: relative; 
     padding: 100px 110px;
     display: block;
@@ -482,7 +489,7 @@ footer > div > h3{
   .head-upper{
     margin-right: 90px!important;
   }  
-  .head .head-upper >div .avatar{
+  .avatar{
     border-radius: 50%;
     width: 295px;
     height: 295px;
@@ -500,20 +507,20 @@ footer > div > h3{
     margin-top: 0px;
     margin-left: 0px;
   }
-  .head .head-lower{
+  .head-lower{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
    }
-  .head .head-lower h1{
+  .head-lower h1{
     margin-top: 0px!important;
-    color: black;
+    color: var(--black);
     font-size: 10rem;
     margin-bottom: 25px;
     text-align: start;
     line-height: 80px;
   }
-  .head .head-lower .contact{
+  .contact{
     padding: 15px 30px;
     font-size: 1.0rem;
   }
@@ -532,13 +539,13 @@ footer > div > h3{
     padding: 40px;
     padding-top: 100px;
   }
-  footer > div{
+  .footer-inner{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
-  footer > div > h3{
+  .footer-inner h3{
     font-size: 70px;
   }
   .contact-addr{
@@ -546,13 +553,13 @@ footer > div > h3{
     align-items: center;
     justify-content: space-between;
   }
-  .contact-addr > a{
+  .email{
     margin-right: 15px!important;
   }
   .big{
     display: block;
     margin-right: 15px;
-    color: #0699A6;
+    color: var(--primary);
     font-size: 30px;
     font-weight: 900;
   }
@@ -567,7 +574,7 @@ footer > div > h3{
 @media (min-width: 1025px) {
   header{
     height: 580px;
-    background: rgba(158, 140, 108, 0.2);
+    background: var(--secondary);
     color: #fff;
     position: relative; 
     padding: 100px 130px;
@@ -582,7 +589,7 @@ footer > div > h3{
     margin-right: 110px!important;
     margin-left: 70px;
   }  
-  .head .head-upper >div .avatar{
+  .avatar{
     border-radius: 50%;
     width: 295px;
     height: 295px;
@@ -600,21 +607,21 @@ footer > div > h3{
     margin-top: 0px;
     margin-left: 0px;
   } */
-  .head .head-lower{
+  .head-lower{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     margin-top: 30px;
    }
-  .head .head-lower h1{
+  .head-lower h1{
     margin-top: 10px!important;
-    color: black;
+    color: var(--black);
     font-size: 7.3rem!important;
     margin-bottom: 25px;
     text-align: start;
     line-height: 98px;
   }
-  .head .head-lower .contact{
+  .contact{
     padding: 13px 30px;
     font-size: 1.0rem;
   }
@@ -640,7 +647,7 @@ footer > div > h3{
   }
 
   .deco{
-    background: #0699A6;;
+    background: var(--primary);
     padding: 5px 20px;
     width: 10%;
     margin-bottom: 15px;
@@ -670,12 +677,12 @@ footer > div > h3{
     margin-right: 100px;
     padding-right: 0px;
   }
-  .skill-set-section > ul{
+  .skill-set-list{
     padding: 0px;
-  }.skill-set-section > ul > li{
+  }.skill-set-list-item{
     padding: 0px;
   }
-  .career-traits > p{
+  .career-traits p{
     margin-bottom: 25px;
   }
   .experience-details,
@@ -683,13 +690,13 @@ footer > div > h3{
     display: flex;
     justify-content: space-between;
   }
-  footer > div{
+  .footer-inner{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
-  footer > div > h3{
+  .footer-inner h3{
     font-size: 70px;
   }
   .contact-addr{
@@ -697,13 +704,13 @@ footer > div > h3{
     align-items: center;
     justify-content: space-between;
   }
-  .contact-addr > a{
+  .email{
     margin-right: 15px!important;
   }
   .big{
     display: block;
     margin-right: 15px;
-    color: #0699A6;
+    color: var(--primary);
     font-size: 30px;
     font-weight: 900;
   }
